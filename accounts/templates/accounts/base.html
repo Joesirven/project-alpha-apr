@@ -17,7 +17,7 @@
                     <a href="{% url 'list_projects' %}">Home</a>
                     </li>
                 {% if user.is_authenticated %}
-                    <li><a href="{% url 'list_projects' %}">Logout</a></li>
+                    <li><a href="{% url 'logout' %}">Logout</a></li>
                     {% else %}
                     <li><a href="{% url 'list_projects' %}">Sign Up</a></li>
                     <li><a href="{% url 'login' %}">Login</a></li>
