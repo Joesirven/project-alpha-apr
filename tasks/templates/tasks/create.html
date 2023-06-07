@@ -1,0 +1,18 @@
+{% extends 'tasks/base.html' %}
+
+
+{% block title %} Tracker - Create Task {% endblock %}
+
+
+{% block content %}
+<main>
+    <div>
+        <h1>Create a new task</h1>
+        <form method="post">
+            {% csrf_token %}
+            {{ form.as_p }}
+            <button>Create</button>
+        </form>
+    </div>
+</main>
+{% endblock %}
