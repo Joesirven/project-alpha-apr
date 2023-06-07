@@ -1,6 +1,8 @@
 {% extends "tasks/base.html" %}
-{% block title %}{{ request.user}}'s Tasks{% endblock title %}
 
+{% block title %}
+    {{ request.user }}'s Tasks
+{% endblock title %}
 {% block content %}
     <main>
         <div>
@@ -17,14 +19,14 @@
                             </tr>
                         </thead>
                         {% for task in tasks %}
-                        <tbody>
-                            <tr>
-                                <td>{{ task.name }}</td>
-                                <td>{{ task.start_date|date:"N j, Y, g:i a" }}</td>
-                                <td>{{ task.due_date|date:"N j, Y, g:i a" }}</td>
-                                <td>{{ task.is_completed|yesno }}</td>
-                            </tr>
-                        </tbody>
+                            <tbody>
+                                <tr>
+                                    <td>{{ task.name }}</td>
+                                    <td>{{ task.start_date|date:"N j, Y, g:i a" }}</td>
+                                    <td>{{ task.due_date|date:"N j, Y, g:i a" }}</td>
+                                    <td>{{ task.is_completed|yesno }}</td>
+                                </tr>
+                            </tbody>
                         {% endfor %}
                     </table>
                 </div>
@@ -33,5 +35,4 @@
             {% endif %}
         </div>
     </main>
-
 {% endblock content %}

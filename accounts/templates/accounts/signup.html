@@ -1,16 +1,15 @@
 {% extends 'accounts/base.html' %}
 
 {% block title %}Tracker{% endblock %}
-
 {% block content %}
-<main>
-    <div>
-        <h1>Signup</h1>
-        <form method="post">
-            {% csrf_token %}
-            {{form.as_p}}
-            <button>Signup</button>
-        </form>
-    </div>
-</main>
+    <main>
+        <div>
+            <h1>Signup</h1>
+            <form method="post">
+                {% csrf_token %}
+                {{ form.as_p }}
+                <button>Signup</button>
+            </form>
+        </div>
+    </main>
 {% endblock %}
