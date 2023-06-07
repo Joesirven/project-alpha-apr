@@ -17,10 +17,10 @@
                         {% for project in projects %}
                         <tr>
                             <td>
-                                {{ project.name }}
+                                <a href="{% url 'projects/<int:id>' %}">{{ project.name }}</a>
                             </td>
                             <td>
-                                {{ project.name }}
+                                {{ project.tasks|length }}
                             </td>
                         </tr>
                         {% endfor %}
